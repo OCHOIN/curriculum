@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #0000d6;
-    color: #333;
+    color: #000000;
     line-height: 1.6;
 }
 
@@ -60,7 +60,7 @@ header nav a:hover {
 
 .section p, .section ul, .section ol {
     font-size: 1.1rem;
-    color: #555;
+    color: #000000;
 }
 
 .section ul, .section ol {
