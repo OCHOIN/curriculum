@@ -44,16 +44,18 @@
             </center>
         </section>
         
-        <div class="row mb-4">
+        <div class="row">
             <div class="col-md-4">
-                <button class="btn btn-success w-100" onclick="alternarBoton('color1', 'color2')">Prueba 1</button>
+                <div id="color1" class="p-3 border">Prueba 1</div>
             </div>
             <div class="col-md-4">
-                <button class="btn btn-danger w-100" onclick="alternarBoton('color2', 'color1')">Prueba 2</button>
+                <div id="color2" class="p-3 border ">Prueba 2</div>
             </div>
         </div>
-        <div id="color1" class="p-3 border">Sección relacionada a Prueba 1</div>
-        <div id="color2" class="p-3 border mt-3">Sección relacionada a Prueba 2</div>
+        <center>
+            <button class="btn btn-success w-100" onclick="alternarBoton('color1', 'color2')">Prueba 1</button>
+            <button class="btn btn-danger w-100" onclick="alternarBoton('color2', 'color1')">Prueba 2</button>
+        </center>
         <section id="gustos" class="mb-5">
             <h2>Mis Gustos</h2>
             <ul class="list-group">

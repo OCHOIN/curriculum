@@ -12,37 +12,34 @@
         <h1>Simulación de Semáforo</h1>
     </header>
     <main class="container my-5 text-center">
-        <div class="mb-3">
-            <button id="red" class="btn btn-danger btn-lg" onclick="activarColor('red')">Rojo</button>
+        <div class="row mb-4">
+            <div id="div1" class="col-md-4 border p-3">Div de prueba 1</div>
+            <div id="div2" class="col-md-4 border p-3">Div de prueba 2</div>
+            <div id="div3" class="col-md-4 border p-3">Div de prueba 3</div>
         </div>
-        <div class="mb-3">
-            <button id="yellow" class="btn btn-warning btn-lg" onclick="activarColor('yellow')">Amarillo</button>
-        </div>
-        <div>
-            <button id="green" class="btn btn-success btn-lg" onclick="activarColor('green')">Verde</button>
-        </div>
+        <button class="btn btn-danger mx-2" onclick="cambiarColor('div1', 'red')">ROJO</button>
+        <button class="btn btn-warning mx-2" onclick="cambiarColor('div2', 'yellow')">AMARILLO</button>
+        <button class="btn btn-success mx-2" onclick="cambiarColor('div3', 'green')">VERDE</button>
     </main>
     <footer class="text-center py-3 bg-light">
         <p>&copy; 2024 Simulación de Semáforo</p>
     </footer>
     <script>
-        function activarColor(colorActivo) {
-            // Definir los colores y sus IDs
-            const colores = ['red', 'yellow', 'green'];
+        function cambiarColor(divId, color) {
+            // Obtener todos los divs por su clase
+            const divs = document.querySelectorAll('.row div');
 
-            // Iterar sobre cada color
-            colores.forEach(color => {
-                const boton = document.getElementById(color);
-                if (color === colorActivo) {
-                    // Activar el color seleccionado
-                    boton.style.opacity = '1';
-                } else {
-                    // Cambiar el estilo de los otros colores
-                    boton.style.opacity = '0.5';
-                }
+            // Resetear los colores de todos los divs
+            divs.forEach(div => {
+                div.style.backgroundColor = '';
             });
+
+            // Cambiar el color del div seleccionado
+            const divSeleccionado = document.getElementById(divId);
+            divSeleccionado.style.backgroundColor = color;
         }
     </script>
+    <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
