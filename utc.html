@@ -39,8 +39,10 @@
                     <p class="textop">Hola, soy <strong>Esteban Alejandro Ochoa</strong>, tengo 21 años y soy estudiante de <em>Ingeniería en Sistemas</em> en la <strong>Universidad Técnica de Cotopaxi (UTC)</strong>. Me apasiona la tecnología, el desarrollo de software y la constante evolución del mundo digital.</p>
                 </div>
             </div>
+            <center> 
+                <button class="btn btn-primary" onclick="enviarContenido()">Cambiar Contenido</button> 
+            </center>
         </section>
-        <center> <button class="btn btn-primary" onclick="enviarContenido()">Cambiar Contenido</button> </center>
         
         <div class="row mb-4">
             <div class="col-md-4">
@@ -61,16 +63,61 @@
                 <li class="list-group-item"><strong>Deporte:</strong> Amo el fútbol, especialmente a Lionel Messi y la Selección Argentina.</li>
             </ul>
         </section>
+        <section id="tiempo-libre" class="mb-5">
+            <h2>¿Qué hago en mi tiempo libre?</h2>
+            <p>En mi tiempo libre, disfruto de:</p>
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Tecnologías y Proyectos</div>
+                        Aprender nuevas tecnologías y trabajar en proyectos personales.
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Videojuegos</div>
+                        Jugar videojuegos de estrategia con amigos.
+                    </div>
+                    <span class="badge bg-secondary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Naturaleza</div>
+                        Caminar por la naturaleza.
+                    </div>
+                    <span class="badge bg-success rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Familia</div>
+                        Pasar tiempo con mi familia y seres queridos.
+                    </div>
+                    <span class="badge bg-danger rounded-pill"></span>
+                </li>
+            </ol>
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Si quieres saber más sobre mí, contáctame en: <a href="mailto:esteban.ochoa8693@utc.edu.ec">esteban.ochoa8693@utc.edu.ec</a></p>
+        </section>
+        <center>
+            <button class="btn btn-primary" onclick="showMessage()">INGRESAR</button>
+        </center>
     </main>
     <button class="btn btn-warning w-100" onclick="window.location.href='semaforo.html'">Ir a Semáforo</button>
     <footer class="text-center py-3 bg-light">
         <p>&copy; 2024 Esteban Alejandro Ochoa. Todos los derechos reservados.</p>
     </footer>
     <!-- Bootstrap Bundle JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        function showMessage(){
+            alert("Has presionado el botón INGRESAR");
+        }
+
         function enviarContenido(){
-            const texto = document.querySelector(".textop") // sirve para atrapar elementos por su clase
+            const texto = document.querySelector(".textop"); 
             texto.textContent = "Este es el nuevo contenido generado desde JavaScript";
         }
 
